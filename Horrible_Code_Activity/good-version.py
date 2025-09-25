@@ -15,8 +15,15 @@ elif op == "-":
     print(f"Result: {a - b}")
     
 elif op == "*":
-    print()
+    a = float(input("Number1: "))
+    b = float(input("Number2: "))
+    print(f"Result: {a * b}")
 elif op == "/":
-    print()
+    a = float(input("Number1: "))
+    b = float(input("Number2: "))
+    if b == 0:
+        print("Error: Cannot divide by zero.")
+    else:
+        print(f"Result: {a / b}")
 else:
     print("Invalid operator. Please choose +, -, *, /")
