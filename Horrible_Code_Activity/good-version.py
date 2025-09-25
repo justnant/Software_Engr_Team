@@ -1,36 +1,27 @@
-#this is our good calc
-#calc is slang for those who are new here
-print("Calculator")
-print("Choose +, -, *, /")
-op = input("Op: ")
+# This is our good calc
+# Calc is slang for those who are new here
 
-#addition method
-if op == "+":
-    a = float(input("Number1: "))
-    b = float(input("Number2: "))
-    print(f"Result: {a + b}")
 
-#subtraction method
-elif op == "-":
-    a = float(input("Number1: "))
-    b = float(input("Number2: "))
-    print(f"Result: {a - b}")
+# Addition
+def add(a, b):
+    return a + b
 
-#multiplication method
-elif op == "*":
-    a = float(input("Number1: "))
-    b = float(input("Number2: "))
-    print(f"Result: {a * b}")
+# Subtraction
+def subtract(a, b):
+    return a - b
 
-#division
-elif op == "/":
-    a = float(input("Number1: "))
-    b = float(input("Number2: "))
+# Multiplication
+def multiply(a, b):
+    return a * b
+
+# Division
+def divide(a, b):
     if b == 0:
-        print("Error: Cannot divide by zero.")
-    else:
-        print(f"Result: {a / b}")
+        raise ValueError("Cannot divide by zero.")
+    return a / b
 
-#incorrect input
-else:
-    print("Invalid operator. Please choose +, -, *, /")
+def get_numbers():
+    """Prompt the user for two numbers and return them as floats."""
+    a = float(input("Enter first number: "))
+    b = float(input("Enter second number: "))
+    return a, b
