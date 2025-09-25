@@ -21,7 +21,28 @@ def divide(a, b):
     return a / b
 
 def get_numbers():
-    """Prompt the user for two numbers and return them as floats."""
     a = float(input("Enter first number: "))
     b = float(input("Enter second number: "))
     return a, b
+
+# Main program
+def main():
+    print("Simple Calculator")
+    print("Choose an operation: +, -, *, /")
+    choice = input("Enter operation: ")
+
+    a, b = get_numbers()
+
+if choice == "+":
+        print("Result:", add(a, b))
+    elif choice == "-":
+        print("Result:", subtract(a, b))
+    elif choice == "*":
+        print("Result:", multiply(a, b))
+    elif choice == "/":
+        print("Result:", divide(a, b))
+    else:
+        print("Invalid operation selected.")
+
+if __name__ == "__main__":
+    main()
