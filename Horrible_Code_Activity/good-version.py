@@ -33,7 +33,7 @@ def main():
 
     a, b = get_numbers()
 
-if choice == "+":
+    if choice == "+":
         print("Result:", add(a, b))
     elif choice == "-":
         print("Result:", subtract(a, b))
